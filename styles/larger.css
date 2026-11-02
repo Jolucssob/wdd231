@@ -1,0 +1,51 @@
+@media screen and (min-width: 768px) {
+
+    /* Navegação para telas maiores */
+
+    #menu-button {
+        display: none;
+    }
+
+    #primary-nav,
+    #primary-nav.open {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #primary-nav a {
+        flex: 1;
+        max-width: 250px;
+    }
+
+    /* Organização do conteúdo principal */
+
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+    }
+
+    main h1 {
+        grid-column: 1 / -1;
+        margin-bottom: 0;
+    }
+
+    #about {
+        grid-column: 1;
+    }
+
+    #student-photo {
+        grid-column: 2;
+    }
+
+    #courses {
+        grid-column: 1 / -1;
+    }
+
+    /* Cursos em três colunas */
+
+    #course-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

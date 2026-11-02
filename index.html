@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Página inicial de José Lucas Sobrinho para o curso WDD 231 - Desenvolvimento Frontend para Web I da BYU-Idaho.">
+    <meta name="author" content="José Lucas Sobrinho">
+
+    <title>WDD 231 | José Lucas Sobrinho</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="images/logo.svg" alt="Logotipo do site" width="50" height="50">
+
+            <span>José Lucas Sobrinho</span>
+
+            <button id="menu-button" type="button" aria-label="Abrir menu de navegação" aria-expanded="false"
+                aria-controls="primary-nav">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <nav id="primary-nav" aria-label="Navegação principal">
+        <a href="index.html" class="active" aria-current="page">
+            Página Inicial
+        </a>
+        <a href="#" aria-label="Projeto da Câmara - em desenvolvimento">
+            Projeto da Câmara
+        </a>
+        <a href="#" aria-label="Projeto Final - em desenvolvimento">
+            Projeto Final
+        </a>
+    </nav>
+
+
+
+    <main>
+        <h1>Página Inicial</h1>
+
+        <section id="about">
+            <h2>Sobre Mim</h2>
+            <p>
+                Sou José Lucas Sobrinho, estudante de Desenvolvimento
+                de Software na BYU-Idaho. Tenho interesse em
+                desenvolvimento web e na criação de soluções
+                tecnológicas para diferentes áreas profissionais.
+            </p>
+        </section>
+
+
+        <section id="student-photo">
+            <h2>Foto do Estudante</h2>
+            <img src="images/foto-estudante.webp" alt="Retrato de José Lucas Sobrinho" width="300" height="330"
+                loading="eager" fetchpriority="high">
+        </section>
+
+
+
+        <section id="courses">
+            <h2>Cursos de Certificação Web</h2>
+
+            <div class="course-filters">
+                <button type="button" id="all">Todos</button>
+                <button type="button" id="wdd">WDD</button>
+                <button type="button" id="cse">CSE</button>
+            </div>
+
+            <div id="course-list"></div>
+
+            <p id="total-credits" aria-live="polite"></p>
+        </section>
+
+    </main>
+
+
+
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/jolucssob" target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/jos%C3%A9-lucas-sobrinho-8272043b9/" target="_blank"
+                rel="noopener noreferrer">
+                LinkedIn
+            </a>
+        </div>
+
+        <p>
+            &copy; <span id="currentyear"></span>
+            José Lucas Sobrinho • Bahia, Brasil
+        </p>
+
+        <p id="ultimaModificacao"></p>
+    </footer>
+
+
+</body>
+
+</html>

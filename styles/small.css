@@ -1,0 +1,202 @@
+/* Estilos básicos para a fotografia do estudante */
+
+
+:root {
+    --primary-color: #164e78;
+    --dark-color: #102f46;
+    --light-color: #f1f5f9;
+    --white-color: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+section {
+    margin-bottom: 1.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+section h2 {
+    margin: 0;
+    padding: 0.8rem;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+section p {
+    padding: 1rem;
+    line-height: 1.6;
+}
+
+#student-photo img {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 8px;
+}
+
+/* Cabeçalho e navegação - mobile */
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.header-content span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    flex: 1;
+}
+
+#menu-button {
+    padding: 0.5rem 0.8rem;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#primary-nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--dark-color);
+}
+
+#primary-nav.open {
+    display: flex;
+}
+
+#primary-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+}
+
+#primary-nav a:hover,
+#primary-nav a:focus-visible {
+    background-color: #315d79;
+}
+
+#primary-nav a.active {
+    background-color: #426b86;
+    font-weight: 700;
+}
+
+/* Rodapé responsivo */
+
+footer {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+/* CURSOS DE CERTIFICAÇÃO WEB */
+
+.course-filters {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.course-filters button {
+    flex: 1;
+    padding: 0.75rem;
+    background-color: #f1f5f9;
+    color: #102f46;
+    border: 1px solid #102f46;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.course-filters button:hover,
+.course-filters button:focus-visible {
+    background-color: #d6e5ef;
+}
+
+#course-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0 1rem;
+}
+
+.course-card {
+    padding: 0.8rem;
+    background-color: #e2e8f0;
+    color: #102f46;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.course-card.completed {
+    background-color: #164e78;
+    color: white;
+    font-weight: 700;
+}
+
+#total-credits {
+    text-align: center;
+    padding: 1rem;
+}
