@@ -1,0 +1,59 @@
+/* WDD 231 - Câmara de Comércio de Salvador
+   Normalização básica do CSS
+   Autor: José Lucas Sobrinho
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol {
+    margin-top: 0;
+}
+
+img,
+picture,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    display: block;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+}
+
+:focus-visible {
+    outline: 3px solid #b7791f;
+    outline-offset: 3px;
+}

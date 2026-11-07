@@ -1,0 +1,262 @@
+/* WDD 231 - Câmara de Comércio de Salvador
+   Estilos para telas pequenas - Mobile First
+   Autor: José Lucas Sobrinho
+*/
+
+:root {
+    --primary-color: #123b59;
+    --secondary-color: #e8b75d;
+    --background-color: #f5f7fa;
+    --text-color: #203040;
+    --white-color: #ffffff;
+    --border-color: #cbd5e1;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 0;
+}
+
+/* NAVEGAÇÃO */
+
+nav {
+    background-color: var(--primary-color);
+}
+
+nav a {
+    display: block;
+    padding: 0.9rem;
+    color: var(--white-color);
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: #315d79;
+}
+
+nav a.active {
+    background-color: #315d79;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    min-height: 60vh;
+}
+
+main h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+/* BOTÕES DE VISUALIZAÇÃO */
+
+.view-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.view-buttons button {
+    padding: 0.7rem 1.2rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.view-buttons button:hover,
+.view-buttons button:focus-visible {
+    background-color: #315d79;
+}
+
+.view-buttons button.active {
+    background-color: var(--secondary-color);
+    color: #172b3a;
+    border-color: #8a5b12;
+}
+
+/* DIRETÓRIO DE EMPRESAS */
+
+#members {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+}
+
+.member-card {
+    min-width: 0;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 8%);
+    overflow-wrap: anywhere;
+}
+
+.member-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.member-card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 0 auto 1rem;
+    object-fit: contain;
+}
+
+.member-card p {
+    margin: 0.5rem 0;
+}
+
+.member-card a {
+    color: #164e78;
+    text-decoration: underline;
+}
+
+/* VISUALIZAÇÃO EM LISTA */
+
+#members.list {
+    display: flex;
+    flex-direction: column;
+}
+
+#members.list .member-card img {
+    display: none;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: var(--white-color);
+}
+
+/* COMPLEMENTOS DO LAYOUT MOBILE */
+
+/* Identificação do site */
+
+.site-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.site-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.site-location {
+    font-size: 0.9rem;
+    color: #f2cf8e;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* Menu para celulares */
+
+#menu-button {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0.4rem 0.7rem;
+    font-size: 1.5rem;
+}
+
+#primary-nav {
+    display: none;
+}
+
+#primary-nav.open {
+    display: block;
+}
+
+/* Título e apresentação */
+
+main h1 {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+
+.introduction {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Ajuste do diretório */
+
+#members.grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+#members.list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Rodapé */
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Ajuste das imagens dos cartões */
+
+.member-card img {
+    width: 100%;
+    max-width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 0 auto 1rem;
+}

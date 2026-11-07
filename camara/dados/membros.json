@@ -1,0 +1,67 @@
+{
+    "members": [
+        {
+            "name": "Bahia Tecnologia Digital",
+            "address": "Av. Tancredo Neves, Salvador, BA",
+            "phone": "(71) 3000-1001",
+            "website": "https://example.com",
+            "image": "imagens/tecnologia.webp",
+            "membership": 3,
+            "description": "Soluções tecnológicas e desenvolvimento de software."
+        },
+        {
+            "name": "Sabores da Bahia Gastronomia",
+            "address": "Rua das Laranjeiras, Pelourinho, Salvador, BA",
+            "phone": "(71) 3000-1002",
+            "website": "https://example.com",
+            "image": "imagens/gastronomia.webp",
+            "membership": 2,
+            "description": "Gastronomia regional e valorização da culinária baiana."
+        },
+        {
+            "name": "Atlântico Turismo Salvador",
+            "address": "Av. Oceânica, Barra, Salvador, BA",
+            "phone": "(71) 3000-1003",
+            "website": "https://example.com",
+            "image": "imagens/turismo.webp",
+            "membership": 3,
+            "description": "Turismo cultural e experiências pela Bahia."
+        },
+        {
+            "name": "Salvador Construções",
+            "address": "Av. ACM, Salvador, BA",
+            "phone": "(71) 3000-1004",
+            "website": "https://example.com",
+            "image": "imagens/construcao.webp",
+            "membership": 1,
+            "description": "Construção civil e projetos de infraestrutura."
+        },
+        {
+            "name": "Verde Bahia Sustentabilidade",
+            "address": "Rua da Paz, Rio Vermelho, Salvador, BA",
+            "phone": "(71) 3000-1005",
+            "website": "https://example.com",
+            "image": "imagens/sustentabilidade.webp",
+            "membership": 2,
+            "description": "Consultoria ambiental e soluções sustentáveis."
+        },
+        {
+            "name": "Educa Salvador",
+            "address": "Av. Sete de Setembro, Salvador, BA",
+            "phone": "(71) 3000-1006",
+            "website": "https://example.com",
+            "image": "imagens/educacao.webp",
+            "membership": 3,
+            "description": "Formação profissional e educação tecnológica."
+        },
+        {
+            "name": "Comércio Popular Bahia",
+            "address": "Av. Joana Angélica, Nazaré, Salvador, BA",
+            "phone": "(71) 3000-1007",
+            "website": "https://example.com",
+            "image": "imagens/comercio.webp",
+            "membership": 1,
+            "description": "Comércio varejista e produtos diversificados."
+        }
+    ]
+}
