@@ -134,4 +134,9 @@
             grid-template-columns: repeat(3, minmax(0, 1fr));
         }
     }
+
+    /* Garante contraste adequado na navegação principal */
+    #primary-nav {
+        color: #ffffff;
+    }
 }
