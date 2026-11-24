@@ -10,8 +10,8 @@
     --text-color: #203040;
     --white-color: #ffffff;
     --border-color: #cbd5e1;
+    --hover-color: #315d79;
 }
-
 
 body {
     margin: 0;
@@ -51,11 +51,11 @@ nav a {
 
 nav a:hover,
 nav a:focus-visible {
-    background-color: #315d79;
+    background-color: var(--hover-color);
 }
 
 nav a.active {
-    background-color: #315d79;
+    background-color: var(--hover-color);
     border-bottom: 3px solid var(--secondary-color);
 }
 
@@ -63,16 +63,29 @@ nav a.active {
 
 main {
     width: 100%;
+    box-sizing: border-box;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
     min-height: 60vh;
 }
 
+main h1 {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+
 main h2 {
     color: var(--primary-color);
     text-align: center;
     margin: 1.5rem 0;
+}
+
+.introduction {
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 /* BOTÕES DE VISUALIZAÇÃO */
@@ -94,7 +107,7 @@ main h2 {
 
 .view-buttons button:hover,
 .view-buttons button:focus-visible {
-    background-color: #315d79;
+    background-color: var(--hover-color);
 }
 
 .view-buttons button.active {
@@ -117,7 +130,7 @@ main h2 {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1rem;
-    box-shadow: 0 2px 6px rgb(0 0 0 / 8%);
+    box-shadow: 0 2px 6px #00000014;
     overflow-wrap: anywhere;
 }
 
@@ -155,6 +168,12 @@ main h2 {
     display: none;
 }
 
+/* VISUALIZAÇÃO EM GRADE */
+
+#members.grid {
+    display: grid;
+}
+
 /* RODAPÉ */
 
 footer {
@@ -173,6 +192,12 @@ footer a {
     color: var(--white-color);
 }
 
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 /* IDENTIFICAÇÃO DO SITE */
 
 .site-brand {
@@ -183,7 +208,7 @@ footer a {
 
 .site-name {
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .site-location {
@@ -202,8 +227,8 @@ footer a {
 
 #menu-button {
     background: transparent;
-    color: white;
-    border: 1px solid white;
+    color: var(--white-color);
+    border: 1px solid var(--white-color);
     border-radius: 5px;
     padding: 0.4rem 0.7rem;
     font-size: 1.5rem;
@@ -217,35 +242,7 @@ footer a {
     display: block;
 }
 
-/* TÍTULO E APRESENTAÇÃO */
-
-main h1 {
-    color: var(--primary-color);
-    text-align: center;
-    font-size: 1.8rem;
-    margin: 1rem 0;
-}
-
-.introduction {
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-/* VISUALIZAÇÃO EM GRADE */
-
-#members.grid {
-    display: grid;
-}
-
-/* ORGANIZAÇÃO DO RODAPÉ */
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-/* Formulário de associação */
+/* FORMULÁRIO DE ASSOCIAÇÃO */
 
 form {
     display: flex;
@@ -282,15 +279,15 @@ form textarea {
 form input:focus-visible,
 form select:focus-visible,
 form textarea:focus-visible {
-    outline: 3px solid #315d79;
+    outline: 3px solid var(--hover-color);
     outline-offset: 2px;
 }
 
-/* Botão de envio */
+/* BOTÃO DE ENVIO */
 
 .submit-button {
-    background-color: #123b59;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     border: none;
     border-radius: 5px;
     padding: 1rem;
@@ -301,15 +298,15 @@ form textarea:focus-visible {
 
 .submit-button:hover,
 .submit-button:focus-visible {
-    background-color: #315d79;
+    background-color: var(--hover-color);
 }
 
 .submit-button:focus-visible {
-    outline: 3px solid #e8b75d;
+    outline: 3px solid var(--secondary-color);
     outline-offset: 3px;
 }
 
-/* Cartões dos níveis de associação */
+/* CARTÕES DOS NÍVEIS DE ASSOCIAÇÃO */
 
 .membership-cards {
     display: grid;
@@ -319,16 +316,17 @@ form textarea:focus-visible {
 }
 
 .membership-card {
-    background-color: #ffffff;
-    border: 1px solid #cbd5e1;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 3px 8px rgb(0 0 0 / 10%);
+    box-shadow: 0 3px 8px #0000001a;
+    animation: entradaCartao 0.8s ease both;
 }
 
 .membership-card h3 {
-    color: #123b59;
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -338,8 +336,8 @@ form textarea:focus-visible {
 
 .membership-card a {
     display: inline-block;
-    background-color: #123b59;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     padding: 0.75rem 1.25rem;
     border-radius: 6px;
     text-decoration: none;
@@ -348,98 +346,10 @@ form textarea:focus-visible {
 
 .membership-card a:hover,
 .membership-card a:focus-visible {
-    background-color: #315d79;
-    color: #ffffff;
+    background-color: var(--hover-color);
 }
 
-/* Animação inicial dos cartões de associação */
-
-@keyframes aparecerCartao {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.membership-card {
-    animation: aparecerCartao 0.8s ease-out both;
-}
-
-.membership-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.membership-card:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-.membership-card:nth-child(4) {
-    animation-delay: 0.6s;
-}
-
-/* Respeita a preferência por movimento reduzido */
-@media (prefers-reduced-motion: reduce) {
-    .membership-card {
-        animation: none;
-    }
-}
-
-/* ========================================
-   MODAIS DOS NÍVEIS DE ASSOCIAÇÃO
-======================================== */
-
-.membership-container dialog {
-    width: 90%;
-    max-width: 500px;
-    max-height: 85vh;
-    overflow-y: auto;
-    box-sizing: border-box;
-    padding: 25px;
-    border: 1px solid #123b59;
-    border-radius: 12px;
-    background-color: #ffffff;
-    color: #203040;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-}
-
-.membership-container dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.membership-container dialog h2 {
-    color: #123b59;
-    margin-top: 0;
-}
-
-.membership-container dialog li {
-    margin-bottom: 10px;
-}
-
-.membership-container dialog button {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin-top: 20px;
-    background-color: #123b59;
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.membership-container dialog button:hover {
-    background-color: #315b73;
-}
-
-/* ========================================
-   ANIMAÇÃO DOS CARTÕES DE ASSOCIAÇÃO
-======================================== */
+/* ANIMAÇÃO DOS CARTÕES DE ASSOCIAÇÃO */
 
 @keyframes entradaCartao {
     from {
@@ -451,10 +361,6 @@ form textarea:focus-visible {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.membership-card {
-    animation: entradaCartao 0.8s ease both;
 }
 
 .membership-card:nth-child(1) {
@@ -473,7 +379,7 @@ form textarea:focus-visible {
     animation-delay: 0.7s;
 }
 
-/* Respeita as preferências de acessibilidade */
+/* ACESSIBILIDADE: MOVIMENTO REDUZIDO */
 
 @media (prefers-reduced-motion: reduce) {
     .membership-card {
@@ -481,9 +387,53 @@ form textarea:focus-visible {
     }
 }
 
-/* =========================================
-   PÁGINA DE AGRADECIMENTO
-   ========================================= */
+/* MODAIS DOS NÍVEIS DE ASSOCIAÇÃO */
+
+.membership-container dialog {
+    width: 90%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 25px;
+    border: 1px solid var(--primary-color);
+    border-radius: 12px;
+    background-color: var(--white-color);
+    color: var(--text-color);
+    box-shadow: 0 8px 25px #00000040;
+}
+
+.membership-container dialog::backdrop {
+    background-color: #00000099;
+}
+
+.membership-container dialog h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.membership-container dialog li {
+    margin-bottom: 10px;
+}
+
+.membership-container dialog button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.membership-container dialog button:hover {
+    background-color: #315b73;
+}
+
+/* PÁGINA DE AGRADECIMENTO */
 
 .thankyou-page {
     max-width: 900px;
@@ -492,11 +442,11 @@ form textarea:focus-visible {
 }
 
 .thankyou-page .membership-form {
-    background-color: #ffffff;
+    background-color: var(--white-color);
     padding: 1.5rem;
     border: 1px solid #c8d5e3;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px #0000001a;
 }
 
 #dados-solicitacao {
@@ -519,8 +469,8 @@ form textarea:focus-visible {
 
 .thankyou-page a[href="index.html"] {
     display: block;
-    background-color: #123b59;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     padding: 1rem;
     border-radius: 6px;
     text-align: center;

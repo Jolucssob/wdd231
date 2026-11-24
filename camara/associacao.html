@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
     <meta name="description"
         content="Associe-se à Câmara de Comércio de Salvador, Bahia. Conheça os níveis de associação e preencha o formulário para solicitar sua participação.">
 
@@ -14,45 +13,48 @@
     <title>Associe-se | Câmara de Comércio de Salvador</title>
 
     <!-- Metadados Open Graph -->
+    <meta property="og:type" content="website">
 
-    <meta property="og:image" content="https://jolucssob.github.io/wdd231/camara/imagens/salvador-social.webp">
-
-    <meta property="og:url" content="https://jolucssob.github.io/wdd231/camara/associacao.html">
     <meta property="og:title" content="Associe-se à Câmara de Comércio de Salvador">
 
     <meta property="og:description"
         content="Conheça os níveis de associação e faça parte da Câmara de Comércio de Salvador, ampliando suas oportunidades de negócios.">
+
+    <meta property="og:image" content="https://jolucssob.github.io/wdd231/camara/imagens/salvador-social.webp">
+
+    <meta property="og:url" content="https://jolucssob.github.io/wdd231/camara/associacao.html">
+
     <!-- Ícone -->
     <link rel="icon" href="imagens/favicon.ico">
 
     <!-- Google Fonts - Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
 
     <!-- CSS -->
     <link rel="stylesheet" href="estilos/normalizar.css">
     <link rel="stylesheet" href="estilos/telas-pequenas.css">
     <link rel="stylesheet" href="estilos/telas-grandes.css">
     <link rel="stylesheet" href="estilos/inicio.css">
-    <!-- JavaScript -->
+
     <!-- JavaScript -->
     <script src="scripts/navegacao.js" defer></script>
     <script src="scripts/datas.js" defer></script>
     <script src="scripts/associacao.js" defer></script>
-
 </head>
 
 <body>
+
     <header>
         <div class="header-content">
+
             <div class="site-brand">
                 <span class="site-name">
                     Câmara de Comércio de Salvador
                 </span>
+
                 <span class="site-location">
                     Bahia, Brasil
                 </span>
@@ -62,31 +64,42 @@
                 aria-controls="primary-nav">
                 ☰
             </button>
+
         </div>
     </header>
 
+    <!-- Navegação principal -->
 
     <nav id="primary-nav" aria-label="Navegação principal">
         <a href="index.html">Início</a>
         <a href="diretorio.html">Diretório</a>
 
-        <a href="associacao.html" class="active" aria-current="page">Associe-se</a>
+        <a href="associacao.html" class="active" aria-current="page">
+            Associe-se
+        </a>
+
         <a href="discover.html">Descubra</a>
     </nav>
 
-
-
-
     <main>
+
         <h1>Associe-se à Câmara de Comércio de Salvador</h1>
 
         <div class="membership-container">
 
+            <!-- Formulário de associação -->
+
             <section class="membership-form">
+
                 <h2>Solicitação de Associação</h2>
+
                 <p>
                     Preencha o formulário para solicitar sua
                     participação na Câmara de Comércio de Salvador.
+                </p>
+
+                <p>
+                    Projeto acadêmico: utilize somente dados fictícios.
                 </p>
 
                 <form method="get" action="agradecimento.html">
@@ -107,7 +120,7 @@
                         Cargo na organização:
                         <input type="text" name="cargo"
                             title="Informe seu cargo usando pelo menos 7 caracteres, apenas letras, espaços e hífens"
-                            autocomplete="organization-title" pattern="[A-Za-zÀ-ÿ\s-]{7,}">
+                            autocomplete="organization-title" pattern="[\p{L} \-]{7,}" minlength="7">
                     </label>
 
                     <label>
@@ -130,30 +143,40 @@
 
                     <label>
                         Nível de associação:
+
                         <select name="nivel" title="Selecione o nível de associação" required>
+
                             <option value="" disabled selected>
                                 Selecione uma opção
                             </option>
+
                             <option value="np">
                                 Associação NP (sem fins lucrativos)
                             </option>
+
                             <option value="bronze">
                                 Associação Bronze
                             </option>
+
                             <option value="silver">
                                 Associação Prata
                             </option>
+
                             <option value="gold">
                                 Associação Ouro
                             </option>
+
                         </select>
                     </label>
 
                     <label>
                         Descrição da empresa ou organização:
+
                         <textarea name="descricao" title="Descreva as atividades da empresa ou organização" rows="5"
                             cols="40"></textarea>
                     </label>
+
+                    <!-- Registro automático de data e hora -->
 
                     <input type="hidden" id="timestamp" name="timestamp">
 
@@ -161,12 +184,16 @@
                         Enviar solicitação de associação
                     </button>
 
-
                 </form>
+
             </section>
 
+            <!-- Cartões dos níveis de associação -->
+
             <section class="membership-levels">
+
                 <h2>Níveis de Associação</h2>
+
                 <p>
                     Conheça as opções disponíveis para
                     sua empresa ou organização.
@@ -176,38 +203,61 @@
 
                     <article class="membership-card">
                         <h3>Associação NP</h3>
+
                         <p>Para organizações sem fins lucrativos.</p>
+
                         <p>Sem taxa de associação.</p>
-                        <a href="#modal-np">Ver benefícios</a>
+
+                        <a href="#modal-np" aria-haspopup="dialog" aria-label="Ver benefícios da Associação NP">
+                            Ver benefícios
+                        </a>
                     </article>
 
                     <article class="membership-card">
                         <h3>Associação Bronze</h3>
+
                         <p>Benefícios essenciais para empresas.</p>
-                        <a href="#modal-bronze">Ver benefícios</a>
+
+                        <a href="#modal-bronze" aria-haspopup="dialog" aria-label="Ver benefícios da Associação Bronze">
+                            Ver benefícios
+                        </a>
                     </article>
 
                     <article class="membership-card">
                         <h3>Associação Prata</h3>
+
                         <p>Mais oportunidades de divulgação.</p>
-                        <a href="#modal-silver">Ver benefícios</a>
+
+                        <a href="#modal-silver" aria-haspopup="dialog" aria-label="Ver benefícios da Associação Prata">
+                            Ver benefícios
+                        </a>
                     </article>
 
                     <article class="membership-card">
                         <h3>Associação Ouro</h3>
+
                         <p>Benefícios exclusivos e maior visibilidade.</p>
-                        <a href="#modal-gold">Ver benefícios</a>
+
+                        <a href="#modal-gold" aria-haspopup="dialog" aria-label="Ver benefícios da Associação Ouro">
+                            Ver benefícios
+                        </a>
                     </article>
 
                 </div>
 
             </section>
 
-            <!-- Modal de benefícios da Associação NP -->
-            <dialog id="modal-np">
-                <h2>Benefícios da Associação NP</h2>
+            <!-- Modal da Associação NP -->
 
-                <p>Plano gratuito para organizações sem fins lucrativos.</p>
+            <dialog id="modal-np" aria-labelledby="titulo-modal-np">
+
+                <h2 id="titulo-modal-np">
+                    Benefícios da Associação NP
+                </h2>
+
+                <p>
+                    Plano gratuito para organizações sem fins lucrativos.
+                </p>
 
                 <ul>
                     <li>Participação em eventos comunitários.</li>
@@ -219,13 +269,20 @@
                 <button type="button" id="fechar-modal-np">
                     Fechar
                 </button>
+
             </dialog>
 
-            <!-- Modal de benefícios da Associação Bronze -->
-            <dialog id="modal-bronze">
-                <h2>Benefícios da Associação Bronze</h2>
+            <!-- Modal da Associação Bronze -->
 
-                <p>Plano com benefícios essenciais para empresas.</p>
+            <dialog id="modal-bronze" aria-labelledby="titulo-modal-bronze">
+
+                <h2 id="titulo-modal-bronze">
+                    Benefícios da Associação Bronze
+                </h2>
+
+                <p>
+                    Plano com benefícios essenciais para empresas.
+                </p>
 
                 <ul>
                     <li>Participação em eventos empresariais.</li>
@@ -237,13 +294,20 @@
                 <button type="button" id="fechar-modal-bronze">
                     Fechar
                 </button>
+
             </dialog>
 
-            <!-- Modal de benefícios da Associação Prata -->
-            <dialog id="modal-silver">
-                <h2>Benefícios da Associação Prata</h2>
+            <!-- Modal da Associação Prata -->
 
-                <p>Plano com mais oportunidades de divulgação e crescimento.</p>
+            <dialog id="modal-silver" aria-labelledby="titulo-modal-silver">
+
+                <h2 id="titulo-modal-silver">
+                    Benefícios da Associação Prata
+                </h2>
+
+                <p>
+                    Plano com mais oportunidades de divulgação e crescimento.
+                </p>
 
                 <ul>
                     <li>Todos os benefícios da Associação Bronze.</li>
@@ -255,13 +319,20 @@
                 <button type="button" id="fechar-modal-silver">
                     Fechar
                 </button>
+
             </dialog>
 
-            <!-- Modal de benefícios da Associação Ouro -->
-            <dialog id="modal-gold">
-                <h2>Benefícios da Associação Ouro</h2>
+            <!-- Modal da Associação Ouro -->
 
-                <p>Plano com benefícios exclusivos e maior visibilidade.</p>
+            <dialog id="modal-gold" aria-labelledby="titulo-modal-gold">
+
+                <h2 id="titulo-modal-gold">
+                    Benefícios da Associação Ouro
+                </h2>
+
+                <p>
+                    Plano com benefícios exclusivos e maior visibilidade.
+                </p>
 
                 <ul>
                     <li>Todos os benefícios da Associação Prata.</li>
@@ -269,34 +340,49 @@
                     <li>Maior visibilidade nas ações da Câmara.</li>
                     <li>Participação prioritária em eventos.</li>
                     <li>Oportunidades exclusivas de networking.</li>
+                    <li>Possibilidade de destaque na página inicial.</li>
                 </ul>
 
                 <button type="button" id="fechar-modal-gold">
                     Fechar
                 </button>
+
             </dialog>
 
         </div>
+
     </main>
 
+    <!-- Rodapé -->
 
     <footer>
+
         <div class="footer-content">
+
             <div>
                 <strong>Câmara de Comércio de Salvador</strong>
+
                 <p>Salvador, Bahia, Brasil</p>
+
                 <p>Contato: contato@exemplo.com</p>
+
                 <p>Contato fictício — projeto acadêmico</p>
             </div>
 
             <div>
-                <p>WDD 231 — Web Frontend Development II</p>
+                <p>WDD 231 — Web Frontend Development I</p>
+
                 <p>José Lucas Sobrinho</p>
+
                 <p>&copy; <span id="currentyear"></span></p>
+
                 <p id="ultimaModificacao"></p>
             </div>
+
         </div>
+
     </footer>
+
 </body>
 
 </html>

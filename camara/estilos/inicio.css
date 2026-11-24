@@ -1,4 +1,9 @@
-/* Página inicial — Câmara de Comércio de Salvador */
+/* WDD 231 - Câmara de Comércio de Salvador
+   Estilos da página inicial - Mobile First
+   Autor: José Lucas Sobrinho
+*/
+
+/* IMAGEM PRINCIPAL */
 
 .hero {
     position: relative;
@@ -27,11 +32,13 @@
     margin-bottom: 1.5rem;
 }
 
+/* BOTÃO DE ASSOCIAÇÃO */
+
 .cta-button {
     display: inline-block;
     padding: 0.9rem 1.5rem;
-    background-color: #123b59;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     font-weight: 700;
     text-decoration: none;
     border-radius: 6px;
@@ -40,10 +47,9 @@
 .cta-button:hover,
 .cta-button:focus-visible {
     background-color: #285a78;
-    color: #ffffff;
 }
 
-/* Seções de eventos e meteorologia */
+/* EVENTOS E METEOROLOGIA */
 
 .home-sections {
     display: grid;
@@ -53,21 +59,22 @@
 }
 
 .events,
-.weather {
-    background-color: #ffffff;
+.weather,
+.spotlight-card {
+    background-color: var(--white-color);
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+    box-shadow: 0 2px 8px #0000001a;
 }
 
 .events h2,
 .weather h2 {
     margin-top: 0;
-    color: #123b59;
+    color: var(--primary-color);
     text-align: center;
 }
 
-/* Empresas em destaque */
+/* EMPRESAS EM DESTAQUE */
 
 .spotlights {
     margin: 2rem 0;
@@ -75,68 +82,64 @@
 
 .spotlights h2 {
     text-align: center;
-    color: #123b59;
+    color: var(--primary-color);
 }
 
-/* Telas maiores */
+#spotlight-cards {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
 
-@media screen and (min-width: 768px) {
-    .home-sections {
-        grid-template-columns: 1fr 1fr;
-    }
+.spotlight-card {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
 
-    /* Empresas em destaque */
+.spotlight-card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.spotlight-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.spotlight-card p {
+    margin-bottom: 0.75rem;
+}
+
+/* TABLETS */
+
+@media screen and (min-width: 600px) {
 
     #spotlight-cards {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin-top: 1.5rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .spotlight-card {
-        background-color: #ffffff;
-        padding: 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
-        overflow-wrap: anywhere;
+}
+
+/* TELAS MÉDIAS E GRANDES */
+
+@media screen and (min-width: 768px) {
+
+    .home-sections {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .spotlight-card img {
-        display: block;
-        width: 100%;
-        height: 180px;
-        object-fit: contain;
-        margin-bottom: 1rem;
+}
+
+/* COMPUTADORES */
+
+@media screen and (min-width: 1000px) {
+
+    #spotlight-cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .spotlight-card h3 {
-        color: #123b59;
-        margin-bottom: 1rem;
-    }
-
-    .spotlight-card p {
-        margin-bottom: 0.75rem;
-    }
-
-    /* Tablets */
-
-    @media screen and (min-width: 600px) {
-        #spotlight-cards {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-    }
-
-    /* Computadores */
-
-    @media screen and (min-width: 1000px) {
-        #spotlight-cards {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-    }
-
-    /* Garante contraste adequado na navegação principal */
-    #primary-nav {
-        color: #ffffff;
-    }
 }
