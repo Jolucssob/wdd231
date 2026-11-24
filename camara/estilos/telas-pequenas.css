@@ -244,3 +244,290 @@ main h1 {
     flex-direction: column;
     gap: 1rem;
 }
+
+/* Formulário de associação */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 1.5rem auto;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-weight: 500;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.75rem;
+    border: 1px solid #64748b;
+    border-radius: 5px;
+    font: inherit;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form input:focus-visible,
+form select:focus-visible,
+form textarea:focus-visible {
+    outline: 3px solid #315d79;
+    outline-offset: 2px;
+}
+
+/* Botão de envio */
+
+.submit-button {
+    background-color: #123b59;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.submit-button:hover,
+.submit-button:focus-visible {
+    background-color: #315d79;
+}
+
+.submit-button:focus-visible {
+    outline: 3px solid #e8b75d;
+    outline-offset: 3px;
+}
+
+/* Cartões dos níveis de associação */
+
+.membership-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.membership-card {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 10%);
+}
+
+.membership-card h3 {
+    color: #123b59;
+    margin-bottom: 1rem;
+}
+
+.membership-card p {
+    margin-bottom: 1rem;
+}
+
+.membership-card a {
+    display: inline-block;
+    background-color: #123b59;
+    color: #ffffff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.membership-card a:hover,
+.membership-card a:focus-visible {
+    background-color: #315d79;
+    color: #ffffff;
+}
+
+/* Animação inicial dos cartões de associação */
+
+@keyframes aparecerCartao {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-card {
+    animation: aparecerCartao 0.8s ease-out both;
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+/* Respeita a preferência por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    .membership-card {
+        animation: none;
+    }
+}
+
+/* ========================================
+   MODAIS DOS NÍVEIS DE ASSOCIAÇÃO
+======================================== */
+
+.membership-container dialog {
+    width: 90%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 25px;
+    border: 1px solid #123b59;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: #203040;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.membership-container dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.membership-container dialog h2 {
+    color: #123b59;
+    margin-top: 0;
+}
+
+.membership-container dialog li {
+    margin-bottom: 10px;
+}
+
+.membership-container dialog button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #123b59;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.membership-container dialog button:hover {
+    background-color: #315b73;
+}
+
+/* ========================================
+   ANIMAÇÃO DOS CARTÕES DE ASSOCIAÇÃO
+======================================== */
+
+@keyframes entradaCartao {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-card {
+    animation: entradaCartao 0.8s ease both;
+}
+
+.membership-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+/* Respeita as preferências de acessibilidade */
+
+@media (prefers-reduced-motion: reduce) {
+    .membership-card {
+        animation: none;
+    }
+}
+
+/* =========================================
+   PÁGINA DE AGRADECIMENTO
+   ========================================= */
+
+.thankyou-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.thankyou-page .membership-form {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border: 1px solid #c8d5e3;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#dados-solicitacao {
+    background-color: #f2f5f8;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+#dados-solicitacao p {
+    margin: 0;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #c8d5e3;
+}
+
+#dados-solicitacao p:last-child {
+    border-bottom: none;
+}
+
+.thankyou-page a[href="index.html"] {
+    display: block;
+    background-color: #123b59;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.thankyou-page a[href="index.html"]:hover {
+    background-color: #305d75;
+}

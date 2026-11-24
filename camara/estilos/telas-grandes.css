@@ -101,3 +101,33 @@
     }
 
 }
+
+/* ========================================
+   PÁGINA DE ASSOCIAÇÃO — TELAS GRANDES
+======================================== */
+
+@media screen and (min-width: 900px) {
+
+    .membership-container {
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        gap: 40px;
+        align-items: start;
+    }
+
+    .membership-form form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .membership-levels {
+        width: 100%;
+    }
+
+    .membership-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+}
