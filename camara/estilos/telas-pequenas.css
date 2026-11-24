@@ -39,6 +39,7 @@ header h1 {
 
 nav {
     background-color: var(--primary-color);
+    color: var(--white-color);
 }
 
 nav a {
@@ -70,16 +71,18 @@ main {
     min-height: 60vh;
 }
 
-main h1 {
+main h1,
+main h2 {
     color: var(--primary-color);
     text-align: center;
+}
+
+main h1 {
     font-size: 1.8rem;
     margin: 1rem 0;
 }
 
 main h2 {
-    color: var(--primary-color);
-    text-align: center;
     margin: 1.5rem 0;
 }
 
@@ -204,6 +207,7 @@ footer a {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+    color: var(--white-color);
 }
 
 .site-name {
@@ -226,7 +230,7 @@ footer a {
 /* MENU PARA CELULARES */
 
 #menu-button {
-    background: transparent;
+    background-color: var(--primary-color);
     color: var(--white-color);
     border: 1px solid var(--white-color);
     border-radius: 5px;
@@ -269,6 +273,8 @@ form textarea {
     border: 1px solid #64748b;
     border-radius: 5px;
     font: inherit;
+    background-color: var(--white-color);
+    color: var(--text-color);
 }
 
 form textarea {
@@ -288,7 +294,7 @@ form textarea:focus-visible {
 .submit-button {
     background-color: var(--primary-color);
     color: var(--white-color);
-    border: none;
+    border: 0;
     border-radius: 5px;
     padding: 1rem;
     font: inherit;
@@ -349,7 +355,7 @@ form textarea:focus-visible {
     background-color: var(--hover-color);
 }
 
-/* ANIMAÇÃO DOS CARTÕES DE ASSOCIAÇÃO */
+/* ANIMAÇÃO DOS CARTÕES */
 
 @keyframes entradaCartao {
     from {
@@ -379,7 +385,7 @@ form textarea:focus-visible {
     animation-delay: 0.7s;
 }
 
-/* ACESSIBILIDADE: MOVIMENTO REDUZIDO */
+/* ACESSIBILIDADE */
 
 @media (prefers-reduced-motion: reduce) {
     .membership-card {
@@ -423,14 +429,15 @@ form textarea:focus-visible {
     margin-top: 20px;
     background-color: var(--primary-color);
     color: var(--white-color);
-    border: none;
+    border: 0;
     border-radius: 6px;
     font-weight: 700;
     cursor: pointer;
 }
 
-.membership-container dialog button:hover {
-    background-color: #315b73;
+.membership-container dialog button:hover,
+.membership-container dialog button:focus-visible {
+    background-color: var(--hover-color);
 }
 
 /* PÁGINA DE AGRADECIMENTO */
@@ -444,7 +451,7 @@ form textarea:focus-visible {
 .thankyou-page .membership-form {
     background-color: var(--white-color);
     padding: 1.5rem;
-    border: 1px solid #c8d5e3;
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     box-shadow: 0 4px 12px #0000001a;
 }
@@ -460,11 +467,11 @@ form textarea:focus-visible {
 #dados-solicitacao p {
     margin: 0;
     padding: 0.8rem 0;
-    border-bottom: 1px solid #c8d5e3;
+    border-bottom: 1px solid var(--border-color);
 }
 
 #dados-solicitacao p:last-child {
-    border-bottom: none;
+    border-bottom: 0;
 }
 
 .thankyou-page a[href="index.html"] {
@@ -478,6 +485,7 @@ form textarea:focus-visible {
     font-weight: 700;
 }
 
-.thankyou-page a[href="index.html"]:hover {
-    background-color: #305d75;
+.thankyou-page a[href="index.html"]:hover,
+.thankyou-page a[href="index.html"]:focus-visible {
+    background-color: var(--hover-color);
 }
